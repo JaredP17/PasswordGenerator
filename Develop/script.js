@@ -24,27 +24,25 @@ function generatePassword() {
   while (!isGenerated) {
     // Prompt user for password length. Default value set to minimum number of characters allowed.
     passwordLength = prompt("How many characters would you like your password to be?", 8);
-    
+
     if (passwordLength === null) { // If generator is cancelled
       return null;
     }
-    else if (isNaN(passwordLength) || passwordLength.trim() === "") { // Checks for NaN/empty string inputs
+    else if (isNaN(passwordLength) || passwordLength.trim() === "") { // If NaN/empty string inputs are found.
       alert("Invalid input. Try again!");
-      break;
-    } 
-    else if (passwordLength < 8 || passwordLength > 128) {
+    }
+    else if (passwordLength < 8 || passwordLength > 128) { // If invalid password length.
       alert("You must choose a password length of at least 8 characters and no more than 128 characters. Try again!");
-      break;
-    } 
-    else {
+    }
+    else { // Valid input, proceed.
       alert("Valid input");
-      console.log(passwordLength === NaN);
+      passwd = "Test Password"
+      return passwd;
       break;
     }
   }
-  
-  passwd = "Test Password"
-  return passwd;
+
+
 }
 
 // Add event listener to generate button
