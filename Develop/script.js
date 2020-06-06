@@ -7,7 +7,13 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+  console.log(passwordText.value);
+}
 
+// Generate random password function
+function generatePassword() {
+
+  return "Test Password";
 }
 
 // Add event listener to generate button
