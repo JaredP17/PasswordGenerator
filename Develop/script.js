@@ -6,8 +6,11 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  // Stops last generated password from clearing if a follow-up generator was cancelled
+  if (password !== null) { 
   passwordText.value = password;
   console.log(passwordText.value);
+  }
 }
 
 // Generate random password function
