@@ -7,7 +7,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   // Stops last generated password from clearing if a follow-up generator was cancelled
-  if (password !== null) {
+  if (password != null) { // Falsy check for null or undefined
     passwordText.value = password;
     console.log("\nGenerated Password: " + passwordText.value);
   }
@@ -30,8 +30,8 @@ function generatePassword() {
     // Prompt user for password length. Default value set to minimum number of characters allowed.
     passwordLength = prompt("How many characters would you like your password to be?", 8);
 
-    if (passwordLength === null) { // If generator is cancelled
-      return null;
+    if (passwordLength == null) { // If generator is cancelled
+      return;
     }
     else if (isNaN(passwordLength) || passwordLength.trim() === "") { // If NaN/empty string inputs are found.
       alert("Invalid input. Try again!");
