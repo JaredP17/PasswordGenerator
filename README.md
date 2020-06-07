@@ -1,48 +1,41 @@
-# 03 JavaScript: Password Generator
+## Description 
+An application that generates a random password based on user-selected criteria. This app runs in the browser and features dynamically updated HTML and CSS powered by JavaScript code. It also features a clean and polished user interface and is responsive, ensuring that it adapts to multiple screen sizes.
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+Check out the deployable site here: [Password Generator](https://jaredp17.github.io/PasswordGenerator/).
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+## Usage
+1. Clone the repo or open deployable site.
+    * Open index.html in default browser (if cloned).
+2. Click _Generate Password_ and follow the prompts.
 
-## User Story
+## Preview
+The following images demonstrate the application functionality:
+![Standalone](./Assets/passwd_demo.png)
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+Prompts following button press of _Generate Password_:
+![Character Length](./Assets/prompt_char_length.png)
+![Character Length](./Assets/prompt_lowercase.png)
+![Character Length](./Assets/prompt_uppercase.png)
+![Character Length](./Assets/prompt_numbers.png)
+![Character Length](./Assets/prompt_special_chars.png)
 
-## Acceptance Criteria
+Sample output (8 and 128 lengths) with all characters included:
+![8 Character Password](./Assets/passwd_demo_8.png)
+![128 Character Password](./Assets/passwd_demo_128.png)
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+## Credits
+This site was designed by the Georgia Tech curriculum team. I wrote the javascript code to generate the password based on their criteria.  
 
-The following image demonstrates the application functionality:
+## Contributing
+I am the sole contributor to this project. 
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+## Licenses
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Review
+Copyright (c) 2020 Jared Porter
 
-You are required to submit the following for review:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-* The URL of the deployed application.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
