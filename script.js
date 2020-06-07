@@ -7,9 +7,9 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   // Stops last generated password from clearing if a follow-up generator was cancelled
-  if (password !== null) { 
-  passwordText.value = password;
-  console.log(passwordText.value);
+  if (password !== null) {
+    passwordText.value = password;
+    console.log("\nGenerated Password: " + passwordText.value);
   }
 }
 
@@ -66,21 +66,26 @@ function generatePassword() {
           charTypeLog += "Special Characters\n";
           charTypeSelected = true;
         }
-
         // Check if character type has been selected
         if (charTypeSelected) {
-          console.log(charTypeLog +"\n");
+          // Log for password criteria
+          console.log(charTypeLog + "\n");
           console.log(charStr + "\n");
         } else {
           alert("At least one character type should be selected!");
-        }   
+        }
+      }
+      // Generate Password
+      for (var i = 0; i < passwordLength; i++) {
+        // Append random character based on size of charStr
+        passwd += charStr[Math.floor(Math.random() * (charStr.length - 1))];
       }
 
+      // Set variable to exit loop
       isGenerated = true;
     }
   }
-
-  passwd = "Test Password"
+  // Return generated password
   return passwd;
 }
 
