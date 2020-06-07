@@ -13,11 +13,17 @@ The following images demonstrate the application functionality:
 ![Standalone](./Assets/passwd_demo.png)
 
 Prompts following button press of _Generate Password_:
+#
 ![Character Length](./Assets/prompt_char_length.png)
+#
 ![Character Length](./Assets/prompt_lowercase.png)
+#
 ![Character Length](./Assets/prompt_uppercase.png)
+#
 ![Character Length](./Assets/prompt_numbers.png)
+#
 ![Character Length](./Assets/prompt_special_chars.png)
+#
 
 Sample output (8 and 128 lengths) with all characters included:
 ![8 Character Password](./Assets/passwd_demo_8.png)
