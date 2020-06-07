@@ -78,7 +78,7 @@ function generatePassword() {
       // Generate Password
       for (var i = 0; i < passwordLength; i++) {
         // Append random character based on size of charStr
-        passwd += charStr[Math.floor(Math.random() * (charStr.length - 1))];
+        passwd += charStr[Math.floor(Math.random() * (charStr.length))];
       }
 
       // Set variable to exit loop
