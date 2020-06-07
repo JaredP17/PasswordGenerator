@@ -26,10 +26,13 @@ function generatePassword() {
   var charTypeSelected = false;
   var charTypeLog = "Input validated!\nPassword will be generated with these character types:\n\n";
 
+  // Loop until password is cancelled or generated 
   while (!isGenerated) {
-    // Prompt user for password length. Default value set to minimum number of characters allowed.
-    passwordLength = prompt("How many characters would you like your password to be?", 8);
-
+    // Prompt user for password length and display boundaries for user.
+    passwordLength = prompt(
+      "How many characters would you like your password to be?\nMinimum: 8\nMaximum: 128"
+    );
+    // Check for valid input
     if (passwordLength == null) { // If generator is cancelled
       return;
     }
@@ -80,7 +83,6 @@ function generatePassword() {
         // Append random character based on size of charStr
         passwd += charStr[Math.floor(Math.random() * (charStr.length))];
       }
-
       // Set variable to exit loop
       isGenerated = true;
     }
