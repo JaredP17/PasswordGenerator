@@ -36,7 +36,7 @@ function generatePassword() {
     if (passwordLength == null) { // If generator is cancelled
       return;
     }
-    else if (isNaN(passwordLength) || passwordLength.trim() === "") { // If NaN/empty string inputs are found.
+    else if (!Number.isInteger(Number(passwordLength)) || passwordLength.trim() === "") { // If NaN/floating points/empty string inputs are found.
       alert("Invalid input. Try again!");
     }
     else if (passwordLength < 8 || passwordLength > 128) { // If invalid password length.
