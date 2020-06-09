@@ -23,7 +23,6 @@ function generatePassword() {
   var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var nums = "0123456789";
   var specialChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-  var charTypeSelected = false;
   var charTypeLog = "Input validated!\nPassword will be generated with these character types:\n\n";
 
   // Loop until password is cancelled or generated 
@@ -44,33 +43,29 @@ function generatePassword() {
     }
     else { // Valid input, proceed.
       // Prompt user for character types to be used in password.
-      while (!charTypeSelected) {
+      while (charStr.length === 0) {
         // Ask to include lowercase letters
         if (confirm("Include lowercase letters?")) {
           charStr += lower;
           charTypeLog += "Lowercase\n";
-          charTypeSelected = true;
         }
         // Ask to include uppercase letters
         if (confirm("Include uppercase letters?")) {
           charStr += upper;
           charTypeLog += "Uppercase\n";
-          charTypeSelected = true;
         }
         // Ask to include numbers
         if (confirm("Include numbers?")) {
           charStr += nums;
           charTypeLog += "Numbers\n";
-          charTypeSelected = true;
         }
         // Ask to include special characters
         if (confirm("Include special characters?")) {
           charStr += specialChars;
           charTypeLog += "Special Characters\n";
-          charTypeSelected = true;
         }
         // Check if character type has been selected
-        if (charTypeSelected) {
+        if (charStr.length > 0) {
           // Log for password criteria
           console.log(charTypeLog + "\n");
           console.log(charStr + "\n");
@@ -81,7 +76,7 @@ function generatePassword() {
       // Generate Password
       for (var i = 0; i < passwordLength; i++) {
         // Append random character based on size of charStr
-        passwd += charStr[Math.floor(Math.random() * (charStr.length))];
+        passwd += charStr[Math.floor(Math.random() * charStr.length)];
       }
       // Set variable to exit loop
       isGenerated = true;
