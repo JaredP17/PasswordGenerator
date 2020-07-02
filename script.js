@@ -1,10 +1,10 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  const password = generatePassword();
+  const passwordText = document.querySelector("#password");
 
   // Stops last generated password from clearing if a follow-up generator was cancelled
   if (password != null) { // Falsy check for null or undefined
@@ -15,15 +15,15 @@ function writePassword() {
 
 // Generate random password function
 function generatePassword() {
-  var isGenerated = false;
-  var passwordLength = 0;
-  var passwd = "";
-  var charStr = ""; // Character string to be used for password generation
-  var lower = "abcdefghijklmnopqrstuvwxyz";
-  var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var nums = "0123456789";
-  var specialChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-  var charTypeLog = "Input validated!\nPassword will be generated with these character types:\n\n";
+  let isGenerated = false;
+  let passwordLength = 0;
+  let passwd = "";
+  let charStr = ""; // Character string to be used for password generation
+  const lower = "abcdefghijklmnopqrstuvwxyz";
+  const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const nums = "0123456789";
+  const specialChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+  let charTypeLog = "Input validated!\nPassword will be generated with these character types:\n\n";
 
   // Loop until password is cancelled or generated 
   while (!isGenerated) {
@@ -74,7 +74,7 @@ function generatePassword() {
         }
       }
       // Generate Password
-      for (var i = 0; i < passwordLength; i++) {
+      for (let i = 0; i < passwordLength; i++) {
         // Append random character based on size of charStr
         passwd += charStr[Math.floor(Math.random() * charStr.length)];
       }
